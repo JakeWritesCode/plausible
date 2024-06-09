@@ -30,6 +30,10 @@ services:
       - 127.0.0.1:8000:8000
     env_file:
       - plausible-conf.env
+    labels:
+      virtual.host: "plausible.smartworkssoftware.com" # change to your domain name
+      virtual.port: "8000"
+      virtual.tls-email: "jake@smartworkssoftware.com" # change to your email
 
 volumes:
   event-data:
