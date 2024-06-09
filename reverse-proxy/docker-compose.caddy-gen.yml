@@ -15,9 +15,14 @@ services:
 
   plausible:
     labels:
-      virtual.host: "example.com" # change to your domain name
+      virtual.host: "plausible.smartworkssoftware.com" # change to your domain name
       virtual.port: "8000"
-      virtual.tls-email: "admin@example.com" # change to your email
+      virtual.tls-email: "jake@smartworkssoftware.com" # change to your email
+  wedding-website:
+    labels:
+      virtual.host: "jakeandkatieswedding.com"
+      virtual.port: "8080"
+      virtual.tls-email: "jake@smartworkssoftware.com"
         
 volumes:
     caddy-certificates:
