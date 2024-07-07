@@ -7,6 +7,7 @@ services:
   # Postgres is handled at the top level MegaServer repo
 
   plausible_events_db:
+    container_name: plausible_events_db
     image: clickhouse/clickhouse-server:23.3.7.5-alpine
     restart: always
     volumes:
@@ -19,6 +20,7 @@ services:
         hard: 262144
 
   plausible:
+    container_name: plausible
     image: plausible/analytics:v2.0
     restart: always
     command: sh -c "sleep 10 && /entrypoint.sh db createdb && /entrypoint.sh db migrate && /entrypoint.sh run"
