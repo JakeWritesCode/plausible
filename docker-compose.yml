@@ -18,6 +18,8 @@ services:
       nofile:
         soft: 262144
         hard: 262144
+    networks:
+      - back-tier
 
   plausible:
     container_name: plausible
@@ -36,6 +38,8 @@ services:
       virtual.host: "plausible.smartworkssoftware.com" # change to your domain name
       virtual.port: "8000"
       virtual.tls-email: "jake@smartworkssoftware.com" # change to your email
+    networks:
+      - back-tier
 
 volumes:
   event-data:
